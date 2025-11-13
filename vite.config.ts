@@ -5,6 +5,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  // **هذا السطر يحل مشكلة المسار على GitHub Pages**
   base: '/numo-platform/',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -52,7 +53,7 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    outDir: 'dist',
+    outDir: 'dist', // مجلد الإخراج الافتراضي بعد البناء
   },
   server: {
     port: 3000,
